@@ -1,0 +1,19 @@
+name,model,rebar_version,engine,engine_version,err,haystack_len,iters,total,median,mad,mean,stddev,min,max
+curated/01-literal/sherlock-en,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,899232,183,4.56s,16.37ms,133.61us,16.43ms,289.33us,15.78ms,18.11ms
+curated/01-literal/sherlock-casei-en,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,899232,123,4.56s,24.43ms,314.74us,24.53ms,562.37us,23.39ms,26.94ms
+curated/01-literal/sherlock-ru,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,1570556,173,4.56s,17.47ms,300.04us,17.44ms,460.70us,15.60ms,18.61ms
+curated/01-literal/sherlock-casei-ru,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,1570556,156,4.56s,19.17ms,253.53us,19.26ms,538.64us,18.31ms,22.54ms
+curated/01-literal/sherlock-zh,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,813478,477,4.56s,6.28ms,86.68us,6.30ms,138.58us,5.92ms,6.91ms
+curated/02-literal-alternate/sherlock-en,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,899232,38,4.66s,80.81ms,803.89us,80.92ms,1.35ms,77.93ms,83.67ms
+curated/02-literal-alternate/sherlock-casei-en,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,899232,29,4.61s,103.76ms,614.26us,103.89ms,1.17ms,101.90ms,106.93ms
+curated/02-literal-alternate/sherlock-ru,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,1570556,35,4.61s,86.83ms,805.97us,86.83ms,1.07ms,84.54ms,88.95ms
+curated/02-literal-alternate/sherlock-casei-ru,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,1570556,31,4.56s,97.47ms,1.58ms,98.20ms,2.37ms,93.44ms,102.62ms
+curated/02-literal-alternate/sherlock-zh,count,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,813478,94,4.56s,31.90ms,375.44us,31.95ms,519.96us,30.91ms,33.40ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,268796,2,4.76s,1.58s,3.32ms,1.58s,3.32ms,1.58s,1.58s
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,,1457,4.51s,1.90ms,20.68us,1.91ms,45.93us,1.80ms,2.23ms
+curated/04-ruff-noqa/real,grep-captures,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,32514634,2,7.06s,2.34s,64.57ms,2.34s,64.57ms,2.27s,2.40s
+curated/04-ruff-noqa/tweaked,grep-captures,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,32514634,5,5.36s,664.37ms,2.72ms,664.22ms,6.08ms,654.79ms,673.24ms
+curated/04-ruff-noqa/compile-real,compile,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,,185827,4.61s,14.37us,298.00ns,14.61us,1.18us,12.95us,58.19us
+curated/06-cloud-flare-redos/original,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,"failed to run command for 'gregex/pike-vm', last line of stderr is: error: pattern can match invalid UTF-8",,0,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns
+curated/06-cloud-flare-redos/simplified-short,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,"failed to run command for 'gregex/pike-vm', last line of stderr is: error: pattern can match invalid UTF-8",,0,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns
+curated/06-cloud-flare-redos/simplified-long,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,"failed to run command for 'gregex/pike-vm', last line of stderr is: error: pattern can match invalid UTF-8",,0,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns,0.00ns

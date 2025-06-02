@@ -76,21 +76,24 @@ regex = { path = "wild/parol-veryl.txt", per-line = "alternate" }
 haystack = { path = "wild/parol-veryl.vl" }
 count = 124_800
 engines = [
-  'dotnet/compiled',
-  'go/regexp',
-  'icu',
-  'java/hotspot',
-  'javascript/v8',
-  'pcre2',
-  'pcre2/jit',
-  'perl',
-  'python/re',
-  'python/regex',
-  're2',
-  'regress',
-  'rust/regex',
-  'rust/regex/lite',
-  'rust/regexold',
+    # 'gregex/pike-vm',
+    # 'gregex/pike-jit',
+    'rust/regex/pikevm',
+    'dotnet/compiled',
+    'go/regexp',
+    'icu',
+    'java/hotspot',
+    'javascript/v8',
+    'pcre2',
+    'pcre2/jit',
+    'perl',
+    'python/re',
+    'python/regex',
+    're2',
+    'regress',
+    'rust/regex',
+    'rust/regex/lite',
+    'rust/regexold',
 ]
 analysis = '''
 `d/.*/std-regex` is excluded because its match count is 5,491,200. This suggest
@@ -110,17 +113,20 @@ regex = { path = "wild/parol-veryl.txt", per-line = "alternate" }
 haystack = 'abcdefg_foobar'
 count = 1
 engines = [
-  'dotnet/compiled',
-  'go/regexp',
-  'icu',
-  'pcre2',
-  'pcre2/jit',
-  'python/re',
-  'python/regex',
-  're2',
-  'rust/regex',
-  'rust/regex/lite',
-  'rust/regexold',
+    # 'gregex/pike-vm',
+    # 'gregex/pike-jit',
+    'rust/regex/pikevm',
+    'dotnet/compiled',
+    'go/regexp',
+    'icu',
+    'pcre2',
+    'pcre2/jit',
+    'python/re',
+    'python/regex',
+    're2',
+    'rust/regex',
+    'rust/regex/lite',
+    'rust/regexold',
 ]
 analysis = '''
 This measures how long it takes to a compile a moderately large lexer.
@@ -141,13 +147,10 @@ name = "multi"
 regex = { path = "wild/parol-veryl.txt", per-line = "pattern" }
 haystack = { path = "wild/parol-veryl.vl" }
 count = [
-  { engine = 'hyperscan', count = 669_500 },
-  { engine = '.*', count = 150_600 },
+    { engine = 'hyperscan', count = 669_500 },
+    { engine = '.*', count = 150_600 },
 ]
-engines = [
-  'hyperscan',
-  'rust/regex',
-]
+engines = ['hyperscan', 'rust/regex']
 analysis = '''
 Hyperscan reports everything that matches, including overlapping matches,
 and that's why its count is higher. It is likely still serviceable for

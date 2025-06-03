@@ -173,9 +173,25 @@ fn model_grep_captures(
 
 fn compile(b: &klv::Benchmark, engine: Engine) -> anyhow::Result<Regex> {
     let pattern = b.regex.one()?;
+    let need_cg = match b.model.as_str() {
+        "compile" => false,
+        "count" => false,
+        "count-spans" => false,
+        "count-captures" => true,
+        "grep" => false,
+        "grep-captures" => true,
+        _ => unreachable!(),
+    };
+
     let builder = gregex::Builder::new(pattern)
         .case_insensitive(b.regex.case_insensitive)
-        .unicode(b.regex.unicode);
+        // We always use unicode because fuck it, the semantic
+        // of no-unicode of the rust-regex parser makes 0 sense to me.
+        // At some point when I will have rewritten the parser from scratch
+        // we will be able to match with non-unicode character classes.
+        //.unicode(b.regex.unicode)
+        .cg(need_cg);
+
     match engine {
         Engine::PikeJIT => {
             let re = builder.pike_jit().map_err(anyhow::Error::from_boxed)?;

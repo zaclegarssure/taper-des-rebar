@@ -1,0 +1,17 @@
+name,model,rebar_version,engine,engine_version,err,haystack_len,iters,total,median,mad,mean,stddev,min,max
+curated/03-date/ascii,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,268796,6,4.96s,554.33ms,13.50ms,540.64ms,29.72ms,495.77ms,569.54ms
+curated/03-date/ascii,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,268796,885,4.56s,3.24ms,111.25us,3.39ms,559.26us,2.58ms,7.57ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,268796,7,5.41s,469.05ms,28.04ms,477.60ms,30.25ms,427.45ms,515.03ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-jit,0.1.0,,268796,20,4.71s,155.55ms,5.22ms,153.44ms,9.75ms,131.80ms,166.92ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,268796,6,4.96s,570.79ms,8.48ms,559.05ms,22.92ms,527.03ms,580.17ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,268796,894,4.56s,3.24ms,104.53us,3.36ms,505.46us,2.17ms,7.36ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,268796,4,4.91s,822.29ms,12.03ms,815.08ms,22.43ms,779.63ms,836.11ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),gregex/pike-jit,0.1.0,,268796,5,5.31s,660.97ms,820.76us,663.80ms,5.04ms,660.15ms,673.60ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,268796,4,4.91s,823.00ms,3.61ms,823.46ms,4.48ms,818.04ms,829.79ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,268796,86,4.61s,34.74ms,1.00ms,35.22ms,1.61ms,32.02ms,42.52ms
+curated/03-date/compile-ascii,compile,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,,811,4.51s,1.80ms,50.91us,1.84ms,215.79us,1.45ms,4.20ms
+curated/03-date/compile-ascii,compile,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,,701,4.51s,2.23ms,69.54us,2.28ms,242.92us,1.86ms,4.24ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,,1140,4.51s,2.36ms,69.81us,2.43ms,346.83us,1.88ms,5.43ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),gregex/pike-jit,0.1.0,,,535,4.51s,5.39ms,292.58us,5.54ms,692.53us,3.88ms,9.21ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,,384,4.56s,4.69ms,84.78us,4.74ms,238.25us,4.30ms,6.64ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,,230,4.56s,9.06ms,310.54us,9.15ms,835.90us,6.53ms,15.56ms

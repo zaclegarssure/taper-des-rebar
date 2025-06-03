@@ -1,0 +1,5 @@
+name,model,rebar_version,engine,engine_version,err,haystack_len,iters,total,median,mad,mean,stddev,min,max
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,268796,4,5.41s,793.18ms,20.27ms,793.66ms,26.61ms,756.74ms,831.54ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),gregex/pike-jit,0.1.0,,268796,5,5.06s,634.92ms,2.86ms,630.45ms,10.18ms,610.61ms,639.20ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,268796,5,5.91s,737.07ms,9.04ms,741.28ms,12.83ms,728.03ms,757.36ms
+curated/03-date/unicode-captures,count-captures,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,268796,86,4.56s,34.96ms,676.27us,35.11ms,1.02ms,33.01ms,38.47ms

@@ -15,11 +15,7 @@ build = "build.rs"
 edition = "2021"
 
 [workspace]
-members = [
-  "shared/klv",
-  "shared/regexredux",
-  "shared/timer",
-]
+members = ["shared/klv", "shared/regexredux", "shared/timer"]
 # We don't include regex engines in our workspace because they aren't really
 # part of rebar and it would be somewhat unfortunate to need to be able to
 # build them in order to work on rebar. So we split them out.
@@ -28,19 +24,20 @@ members = [
 # automatic workspace detection because of this. So if a new entry is added to
 # this list, then '.vim/coc-settings.json' probably also needs to be updated.
 exclude = [
-  "byob/runner",
-  "engines/hyperscan",
-  "engines/icu",
-  "engines/pcre2",
-  "engines/re2",
-  "engines/regress",
-  "engines/rust/aho-corasick",
-  "engines/rust/memchr",
-  "engines/rust/regex",
-  "engines/rust/regex-automata",
-  "engines/rust/regex-lite",
-  "engines/rust/regex-old",
-  "engines/rust/regex-syntax",
+    "byob/runner",
+    "engines/hyperscan",
+    "engines/icu",
+    "engines/pcre2",
+    "engines/re2",
+    "engines/regress",
+    "engines/gregex",
+    "engines/rust/aho-corasick",
+    "engines/rust/memchr",
+    "engines/rust/regex",
+    "engines/rust/regex-automata",
+    "engines/rust/regex-lite",
+    "engines/rust/regex-old",
+    "engines/rust/regex-syntax",
 ]
 
 [[bin]]
@@ -52,7 +49,11 @@ bstr = { version = "1.2.0", default-features = false, features = ["std"] }
 csv = "1.2.0"
 # Using an older version here because I am really not a fan of the dependency
 # tree explosion that has happened in 0.10.
-env_logger = { version = "0.9.3", default-features = false, features = ["atty", "humantime", "termcolor"] }
+env_logger = { version = "0.9.3", default-features = false, features = [
+    "atty",
+    "humantime",
+    "termcolor",
+] }
 lexopt = "0.3.0"
 log = "0.4.14"
 regex-lite = "0.1.0"

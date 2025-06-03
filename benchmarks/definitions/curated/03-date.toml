@@ -65,6 +65,9 @@ count = [
     { engine = 'javascript/v8', count = 111_825 },
     # Unknown why the count span differs here.
     { engine = 'regress', count = 111_841 },
+    # The count differ because it uses unicode character classes
+    { engine = 'gregex/pike-vm', count = 111_841 },
+    { engine = 'gregex/pike-jit', count = 111_841 },
     # Why does Java report the same count as engines that work on UTF-8 despite
     # Java using UTF-16 code units? My thinking here is that since Unicode mode
     # is disabled here, Java only finds ASCII matches (as is consistent with the
@@ -81,8 +84,8 @@ count = [
     { engine = '.*', count = 111_817 },
 ]
 engines = [
-    #    'gregex/pike-vm',
-    #    'gregex/pike-jit',
+    'gregex/pike-vm',
+    'gregex/pike-jit',
     'rust/regex/pikevm',
     'd/ldc/std-regex',
     'dotnet/compiled',
@@ -162,6 +165,24 @@ increasing this limit.
 '''
 
 [[bench]]
+model = "count-captures"
+name = "unicode-captures"
+regex = { path = "wild/date.txt" }
+unicode = true
+haystack = { path = "rust-src-tools-3b0d4813.txt", line-start = 190_000, line-end = 200_000 }
+count = [{ engine = '.*', count = 170_488 }]
+engines = [
+    'gregex/pike-vm',
+    'gregex/pike-jit',
+    'rust/regex/pikevm',
+    'rust/regex',
+]
+analysis = '''
+IDFK
+'''
+
+
+[[bench]]
 model = "compile"
 name = "compile-ascii"
 regex = { path = "wild/date.txt" }
@@ -169,8 +190,8 @@ case-insensitive = true
 haystack = "2010-03-14"
 count = [{ engine = 'hyperscan', count = 10 }, { engine = '.*', count = 5 }]
 engines = [
-    #    'gregex/pike-vm',
-    #    'gregex/pike-jit',
+    'gregex/pike-vm',
+    'gregex/pike-jit',
     'rust/regex/pikevm',
     'go/regexp',
     'hyperscan',

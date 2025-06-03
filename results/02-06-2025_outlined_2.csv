@@ -1,0 +1,13 @@
+name,model,rebar_version,engine,engine_version,err,haystack_len,iters,total,median,mad,mean,stddev,min,max
+curated/03-date/ascii,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,268796,7,5.06s,459.00ms,0.98ms,458.14ms,3.42ms,450.80ms,462.78ms
+curated/03-date/ascii,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,268796,1080,4.56s,2.77ms,46.33us,2.78ms,84.03us,2.60ms,3.33ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,268796,4,4.56s,760.51ms,3.10ms,758.52ms,7.35ms,746.54ms,766.53ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),gregex/pike-jit,0.1.0,,268796,6,5.51s,601.63ms,12.71ms,600.94ms,13.68ms,583.88ms,616.00ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,268796,8,5.26s,432.64ms,11.46ms,430.16ms,12.01ms,413.12ms,445.65ms
+curated/03-date/unicode,count-spans,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,268796,1095,4.56s,2.74ms,40.09us,2.74ms,68.55us,2.27ms,3.27ms
+curated/03-date/compile-ascii,compile,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,,1014,4.51s,1.52ms,58.70us,1.54ms,106.28us,1.25ms,2.32ms
+curated/03-date/compile-ascii,compile,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,,915,4.51s,1.83ms,31.42us,1.84ms,53.71us,1.73ms,2.20ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),gregex/pike-vm,0.1.0,,,1345,4.51s,1.93ms,24.16us,1.94ms,45.19us,1.57ms,2.34ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),gregex/pike-jit,0.1.0,,,831,4.51s,3.27ms,61.96us,3.29ms,129.62us,2.84ms,4.70ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),rust/regex/pikevm,0.4.8,,,510,4.51s,4.12ms,106.38us,4.10ms,158.71us,3.43ms,4.67ms
+curated/03-date/compile-unicode,compile,0.1.0 (rev 19aa8e8e3b),rust/regex,1.11.0,,,316,4.56s,7.17ms,232.82us,7.23ms,308.19us,6.15ms,8.02ms

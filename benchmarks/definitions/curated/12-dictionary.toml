@@ -108,20 +108,23 @@ regex = { path = "dictionary/english/length-15.txt", literal = true, per-line = 
 haystack = { path = "opensubtitles/en-medium.txt" }
 count = 1
 engines = [
-  'd/ldc/std-regex',
-  'dotnet/compiled',
-  'go/regexp',
-  'icu',
-  'java/hotspot',
-  'javascript/v8',
-  'perl',
-  'python/re',
-  'python/regex',
-  're2',
-  'regress',
-  'rust/regex',
-  'rust/regex/lite',
-  'rust/regexold',
+    'gregex/pike-vm',
+    'gregex/pike-jit',
+    'rust/regex/pikevm',
+    'd/ldc/std-regex',
+    'dotnet/compiled',
+    'go/regexp',
+    'icu',
+    'java/hotspot',
+    'javascript/v8',
+    'perl',
+    'python/re',
+    'python/regex',
+    're2',
+    'regress',
+    'rust/regex',
+    'rust/regex/lite',
+    'rust/regexold',
 ]
 analysis = '''
 `dotnet/nobacktrack` is omitted because the regex is too large.
@@ -137,10 +140,7 @@ name = "multi"
 regex = { path = "dictionary/english/length-15.txt", literal = true, per-line = "pattern" }
 haystack = { path = "opensubtitles/en-medium.txt" }
 count = 1
-engines = [
-  'hyperscan',
-  'rust/regex',
-]
+engines = ['hyperscan', 'rust/regex']
 analysis = '''
 Only `hyperscan` and `rust/regex` are included because they are the only regex
 engines to support multi-pattern regexes. (Note that the `regex` crate API
@@ -155,16 +155,19 @@ regex = { path = "dictionary/english/length-15.txt", literal = true, per-line = 
 haystack = "Zubeneschamali's"
 count = 1
 engines = [
-  'dotnet/compiled',
-  'go/regexp',
-  'icu',
-  'python/re',
-  'python/regex',
-  're2',
-  'regress',
-  'rust/regex',
-  'rust/regex/lite',
-  'rust/regexold',
+    'gregex/pike-vm',
+    'gregex/pike-jit',
+    'rust/regex/pikevm',
+    'dotnet/compiled',
+    'go/regexp',
+    'icu',
+    'python/re',
+    'python/regex',
+    're2',
+    'regress',
+    'rust/regex',
+    'rust/regex/lite',
+    'rust/regexold',
 ]
 analysis = '''
 `d/.*/std-regex` is excluded because it caches regex compilation.
@@ -190,10 +193,7 @@ name = "compile-multi"
 regex = { path = "dictionary/english/length-15.txt", literal = true, per-line = "pattern" }
 haystack = "Zubeneschamali's"
 count = 1
-engines = [
-  'hyperscan',
-  'rust/regex',
-]
+engines = ['hyperscan', 'rust/regex']
 analysis = '''
 Only `hyperscan` and `rust/regex` are included because they are the only regex
 engines to support multi-pattern regexes. (Note that the `regex` crate API

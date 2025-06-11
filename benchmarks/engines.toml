@@ -40,14 +40,14 @@ args = ["clean"]
 name = "gregex/pike-jit"
 cwd = "../engines/gregex"
 [engine.version]
-bin = "./target/release/main"
+bin = "./target/debug/main"
 args = ["pike_jit", "--version"]
 [engine.run]
-bin = "./target/release/main"
+bin = "./target/debug/main"
 args = ["pike_jit"]
 [[engine.build]]
 bin = "cargo"
-args = ["build", "--release"]
+args = ["build"]
 [[engine.clean]]
 bin = "cargo"
 args = ["clean"]
